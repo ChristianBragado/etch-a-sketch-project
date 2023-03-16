@@ -2,7 +2,7 @@ const container = document.querySelector('#container');
 const button = document.getElementById('new-grid-button')
 
 button.addEventListener('click', function() {
-    let squaresPerSide = parseInt(prompt("Enter the number of squares per side (maximum 100):"));
+    let squaresPerSide = parseInt(prompt("Enter the number of squares per side (maximum 32):"));
     if (isNaN(squaresPerSide) || squaresPerSide <= 0 || squaresPerSide > 32) {
         alert("Invalid input. Please enter a number between 1 and 32.");
         return;
