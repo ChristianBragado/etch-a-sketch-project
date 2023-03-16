@@ -1,14 +1,25 @@
-
-
 #container {
     display: flex;
-    flex-wrap: wrap;
-    width: 512px;
-    margin: auto;
-}
-
-.grid-item {
-    height: 30px;
-    width: 30px;
+    flex-wrap: wrap-reverse;
+    width: 480px;
+    height: 480px;
+  }
+  .grid-square {
+    width: 28px;
+    height: 28px;
     border: 1px solid black;
-}
+  }
+
+  .colored {
+    background-color: blue;
+  }
+
+  #new-grid-button {
+    padding: 10px 20px;
+    background-color: #FFB900;
+    color: rgb(51, 41, 41);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
