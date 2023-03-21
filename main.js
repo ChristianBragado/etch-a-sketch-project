@@ -1,5 +1,5 @@
 const container = document.querySelector('#container');
-const button = document.getElementById('new-grid-button')
+const button = document.querySelector('.new-grid-button')
 
 button.addEventListener('click', function() {
     let squaresPerSide = parseInt(prompt("Enter the number of squares per side (maximum 32):"));
@@ -12,9 +12,10 @@ button.addEventListener('click', function() {
 
 function generateGrid(squaresPerSide) {
     // Clear the existing grid
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
+    if (container.hasChildNodes()) {
+        container.innerHTML = ''
     }
+  
 
      // Set the dimensions of the container based on the number of squares per side
      let containerSize = squaresPerSide * 30;
@@ -33,16 +34,4 @@ function generateGrid(squaresPerSide) {
      }
  }
 
-for (let i = 0; i < 16 * 16; i++) {
-    const div = document.createElement('div');
-    div.classList.add('grid-square');
-    container.appendChild(div);
-    
-}
-
-const divs = document.querySelectorAll('.grid-square')
-
-divs.forEach(div => div.addEventListener('mouseover', function(e) {
-    this.classList.add('colored')
-}))
 
